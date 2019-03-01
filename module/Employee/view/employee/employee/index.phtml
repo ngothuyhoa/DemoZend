@@ -9,14 +9,16 @@ $this->headTitle($title);
       <th>Employee Job</th> 
       <th>Edit/Delete operations</th>
    </tr> 
-   
+   <?php foreach ($data as $empdata) : ?> 
    <tr>  
-      <td><?php echo $this->a;?></td> 
-      <td><?php echo $this->a;?></td> 
+      <td><?php echo $this->escapeHtml($empdata->emp_name);?></td> 
+      <td><?php echo $this->escapeHtml($empdata->emp_job);?></td> 
       <td> 
-         <a href="<?php echo $this->a ?>">Edit</a> 
-         <a href="<?php echo $this->a ?>">Delete</a> 
+         <a href="<?php echo $this->url('employee', 
+            array('action'=>'edit', 'id' =>$empdata->id));?>">Edit</a> 
+         <a href="<?php echo $this->url('employee', 
+            array('action'=>'delete', 'id' => $empdata->id));?>">Delete</a> 
       </td> 
    </tr> 
- 
+   <?php endforeach; ?> 
 </table> 

@@ -15,7 +15,12 @@
         "php": "^5.6 || ^7.0",
         "zendframework/zend-component-installer": "^1.0 || ^0.7 || ^1.0.0-dev@dev",
         "zendframework/zend-mvc": "^3.0.1",
-        "zfcampus/zf-development-mode": "^3.0"
+        "zfcampus/zf-development-mode": "^3.0",
+        "zendframework/zend-db": "^2.10",
+        "zendframework/zend-stdlib": "^3.2",
+        "zendframework/zend-inputfilter": "^2.10",
+        "zendframework/zend-form": "^2.14",
+        "zendframework/zend-i18n": "^2.9"
     },
     "autoload": {
         "psr-4": {

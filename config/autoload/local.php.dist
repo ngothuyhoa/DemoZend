@@ -11,8 +11,14 @@
  * credentials from accidentally being committed into version control.
  */
 
-return [
+/*return [
    'db' => [
    	'username' => 'root',
    	'password' => 'ngothuyhoa'
-];
+	];
+]
+*/
+
+return array( 
+   'db' => array('username' => 'root', 'password' => 'ngothuyhoa',), 
+); 

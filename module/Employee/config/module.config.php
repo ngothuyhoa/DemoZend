@@ -2,10 +2,17 @@
 namespace Employee;
 use Zend\ServiceManager\Factory\InvokableFactory; 
 use Zend\Router\Http\Segment;  
+use Doctrine\DBAL\Driver\PDOMySql\Driver as PDOMySqlDriver;
+
 return [ 
    'controllers' => [ 
       'factories' => [ 
-         	Controller\EmployeeController::class => InvokableFactory::class,
+         	//Controller\EmployeeController::class => InvokableFactory::class,
+            Controller\EmployeeController::class => function($container) {
+            return new Controller\EmployeeController(
+               $container->get(Model\EmployeeTable::class)
+            ); 
+         },
 
       ], 
    ], 
@@ -39,6 +46,32 @@ return [
                   'action' => 'detail', 
                ], 
             ], 
+         ],
+
+         'employeeAdd' => [ 
+            'type' => Segment::class,
+            'options' => [ 
+               'route' => '/employee/add[/:action[/:id]]',
+               'constraints' => [
+                  'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                  'id' => '[0-9]+', 
+               ], 
+               'defaults' => [ 
+                  'controller' => Controller\EmployeeController::class,
+                  'action' => 'add', 
+               ], 
+            ], 
+         ],
+
+         'employeeLogin' => [ 
+            'type' => Segment::class,
+            'options' => [ 
+               'route' => '/employee/login', 
+               'defaults' => [ 
+                  'controller' => Controller\EmployeeController::class,
+                  'action' => 'login', 
+               ], 
+            ], 
          ], 
       ], 
    ], 
@@ -46,6 +79,8 @@ return [
       'template_map' => [
             'employee/employee/index' => __DIR__ . '/../view/employee/employee/index.phtml',
             'employee/employee/detail' => __DIR__ . '/../view/employee/employee/detail.phtml',
+            'employee/employee/login' => __DIR__ . '/../view/employee/employee/login.phtml',
+            'employee/employee/add' => __DIR__ . '/../view/employee/employee/add.phtml',
         ],
 
       'template_path_stack' => [ 
