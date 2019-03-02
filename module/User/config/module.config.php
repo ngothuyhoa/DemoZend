@@ -34,6 +34,20 @@ return [
                     ], 
                 ], 
             ],
+
+            'edit' => [
+                'type'    => Segment::class,
+                'options' => [
+                    'route'    => '/user/edit[/:id]',
+                    'constraints' => [
+                        'id' => '[0-9]+', 
+                    ],
+                    'defaults' => [
+                        'controller' => Controller\UserController::class,
+                        'action'     => 'edit',
+                    ],
+                ],
+            ],
         ], 
     ],
 

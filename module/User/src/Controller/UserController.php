@@ -49,4 +49,36 @@ class UserController extends AbstractActionController
       	$view->getTemplate('user/add');
       	return $view; 
     }
+
+    public function editAction()
+    {
+        $params = [
+            'id' => $this->params('id'),
+        ];
+        
+        if($this->getRequest()->isPost()){
+            $data = [
+                'user_name' => $this->getRequest()->getPost('user_name'),
+                'email' => $this->getRequest()->getPost('email'),
+                'id' => $this->params('id'),
+            ];
+
+            $prepare = $this->adapter->query("UPDATE users SET user_name = ?, email = ? WHERE id = ?", Adapter::QUERY_MODE_PREPARE);
+            $update = $prepare->execute($data);
+            if($update->getAffectedRows() > 0){
+                return $this->redirect()->toRoute('user'); 
+            } else {
+                echo "Insert Fail";
+            }
+        }
+        $prepare = $this->adapter->query("SELECT * FROM users WHERE id = ?", Adapter::QUERY_MODE_PREPARE);
+        $result = $prepare->execute($params);
+        $result = $result->current();
+
+        $form = new UserForm;   
+        $view = new ViewModel(['form' => $form, 'row' => $result]); 
+        $view->getTemplate('user/add');
+        
+        return $view; 
+    }
 }

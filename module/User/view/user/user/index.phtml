@@ -14,7 +14,7 @@
 		      <td><?php echo $user->user_name; ?></td>
 		      <td><?php echo $user->email; ?></td>
 		      <td>
-		      	<a href="">Edit</a> 
+		      	<a href="<?php echo $this->url('edit', array('id'=>$user->id), true) ?>">Edit</a> 
          		<a href="">Delete</a> 
 		      </td>
 		    </tr>
