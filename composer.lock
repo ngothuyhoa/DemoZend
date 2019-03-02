@@ -1,10 +1,9 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "hash": "25d16d3d1e6b1ac9ea2fdd582554efeb",
     "content-hash": "eb1aa32b660c823a194406ff5c680903",
     "packages": [
         {
@@ -36,7 +35,7 @@
             ],
             "description": "Promoting the interoperability of container objects (DIC, SL, etc.)",
             "homepage": "https://github.com/container-interop/container-interop",
-            "time": "2017-02-14 19:40:03"
+            "time": "2017-02-14T19:40:03+00:00"
         },
         {
             "name": "psr/container",
@@ -85,7 +84,7 @@
                 "container-interop",
                 "psr"
             ],
-            "time": "2017-02-14 16:28:37"
+            "time": "2017-02-14T16:28:37+00:00"
         },
         {
             "name": "zendframework/zend-component-installer",
@@ -137,7 +136,7 @@
                 "plugin",
                 "zf"
             ],
-            "time": "2018-01-11 15:03:06"
+            "time": "2018-01-11T15:03:06+00:00"
         },
         {
             "name": "zendframework/zend-config",
@@ -197,7 +196,7 @@
                 "config",
                 "zf"
             ],
-            "time": "2018-04-24 19:26:44"
+            "time": "2018-04-24T19:26:44+00:00"
         },
         {
             "name": "zendframework/zend-db",
@@ -255,7 +254,7 @@
                 "db",
                 "zf"
             ],
-            "time": "2019-02-25 11:37:45"
+            "time": "2019-02-25T11:37:45+00:00"
         },
         {
             "name": "zendframework/zend-escaper",
@@ -300,7 +299,7 @@
                 "escaper",
                 "zf"
             ],
-            "time": "2018-04-25 15:48:53"
+            "time": "2018-04-25T15:48:53+00:00"
         },
         {
             "name": "zendframework/zend-eventmanager",
@@ -354,7 +353,7 @@
                 "events",
                 "zf2"
             ],
-            "time": "2018-04-25 15:33:34"
+            "time": "2018-04-25T15:33:34+00:00"
         },
         {
             "name": "zendframework/zend-filter",
@@ -419,7 +418,7 @@
                 "filter",
                 "zf"
             ],
-            "time": "2018-12-17 16:00:04"
+            "time": "2018-12-17T16:00:04+00:00"
         },
         {
             "name": "zendframework/zend-form",
@@ -497,7 +496,7 @@
                 "form",
                 "zf"
             ],
-            "time": "2019-02-26 18:13:31"
+            "time": "2019-02-26T18:13:31+00:00"
         },
         {
             "name": "zendframework/zend-http",
@@ -552,7 +551,7 @@
                 "zend",
                 "zf"
             ],
-            "time": "2019-02-19 18:58:14"
+            "time": "2019-02-19T18:58:14+00:00"
         },
         {
             "name": "zendframework/zend-hydrator",
@@ -614,7 +613,7 @@
                 "hydrator",
                 "zf"
             ],
-            "time": "2019-01-07 19:27:11"
+            "time": "2019-01-07T19:27:11+00:00"
         },
         {
             "name": "zendframework/zend-i18n",
@@ -682,7 +681,7 @@
                 "i18n",
                 "zf"
             ],
-            "time": "2018-05-16 16:39:13"
+            "time": "2018-05-16T16:39:13+00:00"
         },
         {
             "name": "zendframework/zend-inputfilter",
@@ -739,7 +738,7 @@
                 "inputfilter",
                 "zf"
             ],
-            "time": "2019-01-30 16:58:51"
+            "time": "2019-01-30T16:58:51+00:00"
         },
         {
             "name": "zendframework/zend-json",
@@ -789,7 +788,7 @@
                 "json",
                 "zf"
             ],
-            "time": "2018-01-04 17:51:34"
+            "time": "2018-01-04T17:51:34+00:00"
         },
         {
             "name": "zendframework/zend-loader",
@@ -834,7 +833,7 @@
                 "loader",
                 "zf"
             ],
-            "time": "2018-04-30 15:20:54"
+            "time": "2018-04-30T15:20:54+00:00"
         },
         {
             "name": "zendframework/zend-modulemanager",
@@ -894,7 +893,7 @@
                 "modulemanager",
                 "zf"
             ],
-            "time": "2017-12-02 06:11:18"
+            "time": "2017-12-02T06:11:18+00:00"
         },
         {
             "name": "zendframework/zend-mvc",
@@ -966,7 +965,7 @@
                 "mvc",
                 "zf"
             ],
-            "time": "2017-11-24 06:32:07"
+            "time": "2017-11-24T06:32:07+00:00"
         },
         {
             "name": "zendframework/zend-router",
@@ -1028,7 +1027,7 @@
                 "zend",
                 "zf"
             ],
-            "time": "2019-02-26 20:24:12"
+            "time": "2019-02-26T20:24:12+00:00"
         },
         {
             "name": "zendframework/zend-servicemanager",
@@ -1096,7 +1095,7 @@
                 "servicemanager",
                 "zf"
             ],
-            "time": "2018-12-22 06:05:09"
+            "time": "2018-12-22T06:05:09+00:00"
         },
         {
             "name": "zendframework/zend-stdlib",
@@ -1142,7 +1141,7 @@
                 "stdlib",
                 "zf"
             ],
-            "time": "2018-08-28 21:34:05"
+            "time": "2018-08-28T21:34:05+00:00"
         },
         {
             "name": "zendframework/zend-uri",
@@ -1189,7 +1188,7 @@
                 "uri",
                 "zf"
             ],
-            "time": "2019-02-27 21:39:04"
+            "time": "2019-02-27T21:39:04+00:00"
         },
         {
             "name": "zendframework/zend-validator",
@@ -1262,7 +1261,7 @@
                 "validator",
                 "zf2"
             ],
-            "time": "2019-01-30 14:26:10"
+            "time": "2019-01-30T14:26:10+00:00"
         },
         {
             "name": "zendframework/zend-view",
@@ -1349,7 +1348,7 @@
                 "view",
                 "zf2"
             ],
-            "time": "2019-02-19 17:40:15"
+            "time": "2019-02-19T17:40:15+00:00"
         },
         {
             "name": "zfcampus/zf-development-mode",
@@ -1398,7 +1397,7 @@
                 "framework",
                 "zf"
             ],
-            "time": "2018-05-07 15:44:42"
+            "time": "2018-05-07T15:44:42+00:00"
         }
     ],
     "packages-dev": [],

@@ -19,5 +19,6 @@ return [
     'Zend\Validator',
     'Zend\Db',
     'Application',
-    'Employee'
+    'Employee',
+    'User',
 ];

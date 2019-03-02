@@ -16,8 +16,8 @@ return [
       	'driver' => 'Pdo',
       	'dsn' => 'mysql:dbname=tutorials;host=localhost;',
       	'driver_options' => [PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''],
-      	'username' => 'root',
-   		'password' => 'ngothuyhoa'
+      	'username' => 'admin',
+   		 'password' => 'ngothuyhoa'
       	
    ],
 

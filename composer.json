@@ -25,7 +25,8 @@
     "autoload": {
         "psr-4": {
             "Application\\": "module/Application/src/",
-            "Employee\\": "module/Employee/src/"
+            "Employee\\": "module/Employee/src/",
+            "User\\": "module/User/src/"
         }
     },
     "autoload-dev": {

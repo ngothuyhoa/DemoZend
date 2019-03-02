@@ -1,0 +1,48 @@
+<h3> Dang Ky</h3>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-mf-offset-3">
+    	<?php
+    		$form = $this->form;
+
+    		$form->prepare();
+    		$form->setAttribute('action', $this->url('add'));
+    		$form->setAttribute('method', 'post');
+    		$form->setAttribute('class', 'form-horizontal');
+    		$formLabel = $this->plugin('formLabel');
+    		echo $this->form()->openTag($form);
+    	?>
+		<div class="form-group">
+			<?php
+				$name = $form->get('user_name');
+				echo $formLabel->openTag() . $name->getOption('label');
+				//echo $formlabel->closeTag();
+				echo $this->formInput($name);
+				echo $this->formElementErrors($name);
+			?>
+	  	</div>
+	  	<div class="form-group">
+		    <?php
+				$email = $form->get('email');
+				echo $formLabel->openTag() . $email->getOption('label');
+				//echo $formlabel->closeTag();
+				echo $this->formInput($email);
+				echo $this->formElementErrors($email);
+			?>
+	  	</div>
+	  	<div class="form-group">
+		    <?php
+				$password = $form->get('password');
+				echo $formLabel->openTag() . $password->getOption('label');
+				//echo $formlabel->closeTag();
+				echo $this->formInput($password);
+				echo $this->formElementErrors($password);
+			?>
+	  	</div>
+		  	<?= $this->formElement($form->get('send')) ?>
+		  	<?= $this->form()->closeTag();?>
+    </div>
+    
+  </div>
+  
+</div>
