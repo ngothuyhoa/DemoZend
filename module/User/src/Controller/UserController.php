@@ -81,4 +81,20 @@ class UserController extends AbstractActionController
         
         return $view; 
     }
+
+    public function deleteAction() {
+        $params = [
+            'id' => $this->params('id'),
+        ];
+        $prepare = $this->adapter->query("DELETE FROM users WHERE id = ?", Adapter::QUERY_MODE_PREPARE);
+        $delete = $prepare->execute($params);
+
+        if($delete->getAffectedRows() > 0){
+            return $this->redirect()->toRoute('user');   
+        } else {
+            echo "Fail";
+        }
+        exit;
+
+    }
 }

@@ -48,6 +48,20 @@ return [
                     ],
                 ],
             ],
+
+            'delete' => [
+                'type'    => Segment::class,
+                'options' => [
+                    'route'    => '/user/delete[/:id]',
+                    'constraints' => [
+                        'id' => '[0-9]+', 
+                    ],
+                    'defaults' => [
+                        'controller' => Controller\UserController::class,
+                        'action'     => 'delete',
+                    ],
+                ],
+            ],
         ], 
     ],
 

@@ -41,7 +41,7 @@ class UserForm extends Form {
            'name' => 'send', 
            'type' => 'Submit',
            'attributes' => [
-           		'value' => 'Send Email',
+           		'value' => 'Submit',
           		'class' => 'btn btn-primary',
            	],
         ]); 
