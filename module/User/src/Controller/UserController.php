@@ -18,6 +18,18 @@ class UserController extends AbstractActionController
 		];
 		$this->adapter = new Adapter($config);
 	}
+
+    public function loginAction()
+    {
+        if($this->getRequest()->isPost()){
+            $a = $this->getRequest();
+            var_dump($a);
+        }
+        
+        $view = new ViewModel(); 
+        $view->getTemplate('login');
+        return $view; 
+    }
 	
     public function indexAction()
     {
@@ -39,7 +51,7 @@ class UserController extends AbstractActionController
     		$prepare = $this->adapter->query("INSERT INTO users(user_name, email, password) VALUE (?, ?, ?)");
     		$insert = $prepare->execute($params);
     		if($insert->getAffectedRows() > 0){
-    			return $this->redirect()->toRoute('user'); 
+    			return $this->redirect()->toRoute('login'); 
     		} else {
     			echo "Insert Fail";
     		}

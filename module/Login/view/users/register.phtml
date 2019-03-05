@@ -1,0 +1,56 @@
+<?php
+$title = "Register";
+$this->headTitle($title);
+$form->prepare();
+?>
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+    <h2><?=$this->escapeHtml($title)?></h2>
+        <?=$this->form()->openTag($form)?>
+        <div class="form-group">
+        <?=$this->formLabel($form->get('username'));?>
+            <div class="col-md-9">
+                <?php
+                echo $this->formElement($form->get('username'));
+                echo $this->formElementErrors($form->get('username'));
+                ?>
+            </div>
+        </div>
+
+        <div class="form-group">
+        <?=$this->formLabel($form->get('email'));?>
+            <div class="col-md-9">
+                <?php
+                echo $this->formElement($form->get('email'));
+                echo $this->formElementErrors($form->get('email'));
+                ?>
+            </div>
+        </div>
+
+        <div class="form-group">
+        <?=$this->formLabel($form->get('password'));?>
+            <div class="col-md-9">
+                <?php
+                echo $this->formElement($form->get('password'));
+                echo $this->formElementErrors($form->get('password'));
+                ?>
+            </div>
+        </div>
+        <div class="form-group">
+        <?=$this->formLabel($form->get('confirm_password'));?>
+            <div class="col-md-9">
+                <?php
+                echo $this->formElement($form->get('confirm_password'));
+                echo $this->formElementErrors($form->get('confirm_password'));
+                ?>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-2 col-md-offset-10">
+                <?=$this->formElement($form->get('btnSubmit'));?>
+            </div>
+        </div>
+        <?=$this->form()->closeTag()?>
+    </div>
+</div>

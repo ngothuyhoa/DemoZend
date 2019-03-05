@@ -21,6 +21,23 @@ return [
       	
    ],
 
+   'doctrine' => [
+        'connection' => [
+            // default connection name
+            'orm_default' => [
+                'driverClass' => \Doctrine\DBAL\Driver\PDOMySql\Driver::class,
+                'params' => [
+                    'host'     => 'localhost',
+                    'port'     => '3306',
+                    'user'     => 'admin',
+                    'password' => 'ngothuyhoa',
+                    'dbname'   => 'tutorials',
+                    'charset' => 'utf8'
+                ],
+            ],
+        ],
+    ],
+
    'service_manager' => [
         'factories' => [
             'Zend\Db\Adapter\Adapter'

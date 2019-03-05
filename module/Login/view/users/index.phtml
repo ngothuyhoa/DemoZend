@@ -1,0 +1,23 @@
+<h3>List Users</h3>
+<a href="<?php echo $this->url('add') ?>""> + Add User</a>
+<table class="table">
+ 	<thead>
+	    <tr>
+	      <th scope="col">UserNam</th>
+	      <th scope="col">Email</th>
+	      <th scope="col">Option</th>
+	    </tr>
+  	</thead>
+  	<tbody>
+  		<?php foreach($users as $user): ?>
+		    <tr>
+		      <td><?=$this->escapeHtml($user->getUsername())?></td>
+		      <td><?=$this->escapeHtml($user->getEmail())?></td>
+		      <td>
+		      	<a href="">Edit</a> 
+         		<a href="">Delete</a> 
+		      </td>
+		    </tr>
+		<?php endforeach; ?>
+  	</tbody>
+</table>

@@ -4,11 +4,13 @@ use Zend\ServiceManager\Factory\InvokableFactory;
 use Zend\Router\Http\Segment; 
 use Zend\Router\Http\Literal;
 use Doctrine\DBAL\Driver\PDOMySql\Driver as PDOMySqlDriver;
+use Zend\Authentication\AuthenticationService;
 
 return [ 
     'controllers' => [ 
         'factories' => [ 
          	Controller\UserController::class => InvokableFactory::class,
+            Controller\AuthController::class => Controller\Factory\AuthControllerFactory::class
         ], 
     ], 
     'router' => [ 
@@ -62,6 +64,17 @@ return [
                     ],
                 ],
             ],
+
+            'login' => [ 
+                'type' => Literal::class,
+                'options' => [ 
+                    'route' => '/loginn',
+                    'defaults' => [ 
+                        'controller' => Controller\UserController::class,
+                        'action' => 'login', 
+                    ], 
+                ], 
+            ],
         ], 
     ],
 
@@ -70,9 +83,19 @@ return [
     'template_map' => [
             'user/index' => __DIR__ . '/../view/user/user/index.phtml',
             'user/add' => __DIR__ . '/../view/user/user/add.phtml',
+            'login' => __DIR__ . '/../view/user/user/login.phtml',
         ],
         'template_path_stack' => [ 
             __DIR__ . '/../view', 
         ], 
-    ], 
+    ],
+
+    'service_manager'=>[
+        'factories' => [
+            Service\AuthManager::class => Service\Factory\AuthManagerFactory::class,
+            Service\AuthAdapter::class => Service\Factory\AuthAdapterFactory::class,
+            AuthenticationService::class => Service\Factory\AuthenticationServiceFactory::class
+
+        ]
+    ]
 ]; 

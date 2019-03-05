@@ -47,7 +47,7 @@ return [
                 ], 
             ],
 
-            'add' => [ 
+            'addEmployee' => [ 
                 'type' => Segment::class,
                 'options' => [ 
                     'route' => '/employee/add[/:action[/:id]]',
