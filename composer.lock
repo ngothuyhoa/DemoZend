@@ -1,10 +1,11 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7c8427982753aea39bdc2ce003ea1ce5",
+    "hash": "f5d5a57cc0a5c18b4aa9c2bfc7ced20b",
+    "content-hash": "4dd28f4882a294274e02a897837e243f",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -35,7 +36,7 @@
             ],
             "description": "Promoting the interoperability of container objects (DIC, SL, etc.)",
             "homepage": "https://github.com/container-interop/container-interop",
-            "time": "2017-02-14T19:40:03+00:00"
+            "time": "2017-02-14 19:40:03"
         },
         {
             "name": "doctrine/annotations",
@@ -103,7 +104,7 @@
                 "docblock",
                 "parser"
             ],
-            "time": "2017-12-06T07:11:42+00:00"
+            "time": "2017-12-06 07:11:42"
         },
         {
             "name": "doctrine/cache",
@@ -178,7 +179,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2018-08-21T18:01:43+00:00"
+            "time": "2018-08-21 18:01:43"
         },
         {
             "name": "doctrine/collections",
@@ -245,7 +246,7 @@
                 "collections",
                 "iterator"
             ],
-            "time": "2017-07-22T10:37:32+00:00"
+            "time": "2017-07-22 10:37:32"
         },
         {
             "name": "doctrine/common",
@@ -326,7 +327,7 @@
                 "doctrine",
                 "php"
             ],
-            "time": "2018-11-21T01:24:55+00:00"
+            "time": "2018-11-21 01:24:55"
         },
         {
             "name": "doctrine/dbal",
@@ -408,7 +409,7 @@
                 "php",
                 "queryobject"
             ],
-            "time": "2018-12-31T03:27:51+00:00"
+            "time": "2018-12-31 03:27:51"
         },
         {
             "name": "doctrine/doctrine-module",
@@ -509,7 +510,7 @@
                 "module",
                 "zf"
             ],
-            "time": "2019-02-17T20:11:57+00:00"
+            "time": "2019-02-17 20:11:57"
         },
         {
             "name": "doctrine/doctrine-orm-module",
@@ -601,7 +602,7 @@
                 "orm",
                 "zf"
             ],
-            "time": "2019-01-22T08:03:01+00:00"
+            "time": "2019-01-22 08:03:01"
         },
         {
             "name": "doctrine/event-manager",
@@ -675,7 +676,7 @@
                 "eventdispatcher",
                 "eventmanager"
             ],
-            "time": "2018-06-11T11:59:03+00:00"
+            "time": "2018-06-11 11:59:03"
         },
         {
             "name": "doctrine/inflector",
@@ -742,7 +743,7 @@
                 "singularize",
                 "string"
             ],
-            "time": "2018-01-09T20:05:19+00:00"
+            "time": "2018-01-09 20:05:19"
         },
         {
             "name": "doctrine/instantiator",
@@ -796,7 +797,7 @@
                 "constructor",
                 "instantiate"
             ],
-            "time": "2017-07-22T11:58:36+00:00"
+            "time": "2017-07-22 11:58:36"
         },
         {
             "name": "doctrine/lexer",
@@ -850,7 +851,7 @@
                 "lexer",
                 "parser"
             ],
-            "time": "2014-09-09T13:34:57+00:00"
+            "time": "2014-09-09 13:34:57"
         },
         {
             "name": "doctrine/orm",
@@ -932,7 +933,7 @@
                 "database",
                 "orm"
             ],
-            "time": "2018-11-20T23:46:46+00:00"
+            "time": "2018-11-20 23:46:46"
         },
         {
             "name": "doctrine/persistence",
@@ -1014,7 +1015,7 @@
                 "orm",
                 "persistence"
             ],
-            "time": "2018-11-21T00:33:13+00:00"
+            "time": "2018-11-21 00:33:13"
         },
         {
             "name": "doctrine/reflection",
@@ -1089,7 +1090,7 @@
             "keywords": [
                 "reflection"
             ],
-            "time": "2018-06-14T14:45:07+00:00"
+            "time": "2018-06-14 14:45:07"
         },
         {
             "name": "paragonie/random_compat",
@@ -1134,7 +1135,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2018-07-02T15:55:56+00:00"
+            "time": "2018-07-02 15:55:56"
         },
         {
             "name": "psr/cache",
@@ -1180,7 +1181,7 @@
                 "psr",
                 "psr-6"
             ],
-            "time": "2016-08-06T20:24:11+00:00"
+            "time": "2016-08-06 20:24:11"
         },
         {
             "name": "psr/container",
@@ -1229,7 +1230,7 @@
                 "container-interop",
                 "psr"
             ],
-            "time": "2017-02-14T16:28:37+00:00"
+            "time": "2017-02-14 16:28:37"
         },
         {
             "name": "psr/simple-cache",
@@ -1277,7 +1278,7 @@
                 "psr-16",
                 "simple-cache"
             ],
-            "time": "2017-10-23T01:57:42+00:00"
+            "time": "2017-10-23 01:57:42"
         },
         {
             "name": "symfony/console",
@@ -1349,7 +1350,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2019-02-23T15:17:42+00:00"
+            "time": "2019-02-23 15:17:42"
         },
         {
             "name": "symfony/contracts",
@@ -1417,7 +1418,7 @@
                 "interoperability",
                 "standards"
             ],
-            "time": "2018-12-05T08:06:11+00:00"
+            "time": "2018-12-05 08:06:11"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -1476,7 +1477,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-09-21T13:07:52+00:00"
+            "time": "2018-09-21 13:07:52"
         },
         {
             "name": "zendframework/zend-authentication",
@@ -1538,7 +1539,7 @@
                 "ZendFramework",
                 "zf"
             ],
-            "time": "2018-04-12T21:09:22+00:00"
+            "time": "2018-04-12 21:09:22"
         },
         {
             "name": "zendframework/zend-cache",
@@ -1621,7 +1622,7 @@
                 "psr-6",
                 "zf"
             ],
-            "time": "2018-05-01T21:58:00+00:00"
+            "time": "2018-05-01 21:58:00"
         },
         {
             "name": "zendframework/zend-component-installer",
@@ -1673,7 +1674,7 @@
                 "plugin",
                 "zf"
             ],
-            "time": "2018-01-11T15:03:06+00:00"
+            "time": "2018-01-11 15:03:06"
         },
         {
             "name": "zendframework/zend-config",
@@ -1733,7 +1734,7 @@
                 "config",
                 "zf"
             ],
-            "time": "2018-04-24T19:26:44+00:00"
+            "time": "2018-04-24 19:26:44"
         },
         {
             "name": "zendframework/zend-crypt",
@@ -1785,7 +1786,7 @@
                 "crypt",
                 "zf"
             ],
-            "time": "2018-04-24T22:01:58+00:00"
+            "time": "2018-04-24 22:01:58"
         },
         {
             "name": "zendframework/zend-db",
@@ -1843,7 +1844,7 @@
                 "db",
                 "zf"
             ],
-            "time": "2019-02-25T11:37:45+00:00"
+            "time": "2019-02-25 11:37:45"
         },
         {
             "name": "zendframework/zend-escaper",
@@ -1888,7 +1889,7 @@
                 "escaper",
                 "zf"
             ],
-            "time": "2018-04-25T15:48:53+00:00"
+            "time": "2018-04-25 15:48:53"
         },
         {
             "name": "zendframework/zend-eventmanager",
@@ -1942,7 +1943,7 @@
                 "events",
                 "zf2"
             ],
-            "time": "2018-04-25T15:33:34+00:00"
+            "time": "2018-04-25 15:33:34"
         },
         {
             "name": "zendframework/zend-filter",
@@ -2007,7 +2008,7 @@
                 "filter",
                 "zf"
             ],
-            "time": "2018-12-17T16:00:04+00:00"
+            "time": "2018-12-17 16:00:04"
         },
         {
             "name": "zendframework/zend-form",
@@ -2085,7 +2086,7 @@
                 "form",
                 "zf"
             ],
-            "time": "2019-02-26T18:13:31+00:00"
+            "time": "2019-02-26 18:13:31"
         },
         {
             "name": "zendframework/zend-http",
@@ -2140,7 +2141,7 @@
                 "zend",
                 "zf"
             ],
-            "time": "2019-02-19T18:58:14+00:00"
+            "time": "2019-02-19 18:58:14"
         },
         {
             "name": "zendframework/zend-hydrator",
@@ -2202,7 +2203,7 @@
                 "hydrator",
                 "zf2"
             ],
-            "time": "2017-09-20T22:02:25+00:00"
+            "time": "2017-09-20 22:02:25"
         },
         {
             "name": "zendframework/zend-i18n",
@@ -2270,7 +2271,7 @@
                 "i18n",
                 "zf"
             ],
-            "time": "2018-05-16T16:39:13+00:00"
+            "time": "2018-05-16 16:39:13"
         },
         {
             "name": "zendframework/zend-inputfilter",
@@ -2327,7 +2328,7 @@
                 "inputfilter",
                 "zf"
             ],
-            "time": "2019-01-30T16:58:51+00:00"
+            "time": "2019-01-30 16:58:51"
         },
         {
             "name": "zendframework/zend-json",
@@ -2377,7 +2378,7 @@
                 "json",
                 "zf"
             ],
-            "time": "2018-01-04T17:51:34+00:00"
+            "time": "2018-01-04 17:51:34"
         },
         {
             "name": "zendframework/zend-loader",
@@ -2422,7 +2423,7 @@
                 "loader",
                 "zf"
             ],
-            "time": "2018-04-30T15:20:54+00:00"
+            "time": "2018-04-30 15:20:54"
         },
         {
             "name": "zendframework/zend-math",
@@ -2473,7 +2474,7 @@
                 "math",
                 "zf"
             ],
-            "time": "2018-12-04T15:45:09+00:00"
+            "time": "2018-12-04 15:45:09"
         },
         {
             "name": "zendframework/zend-modulemanager",
@@ -2533,7 +2534,7 @@
                 "modulemanager",
                 "zf"
             ],
-            "time": "2017-12-02T06:11:18+00:00"
+            "time": "2017-12-02 06:11:18"
         },
         {
             "name": "zendframework/zend-mvc",
@@ -2605,7 +2606,63 @@
                 "mvc",
                 "zf"
             ],
-            "time": "2017-11-24T06:32:07+00:00"
+            "time": "2017-11-24 06:32:07"
+        },
+        {
+            "name": "zendframework/zend-mvc-plugin-flashmessenger",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-mvc-plugin-flashmessenger.git",
+                "reference": "1af2e2d69500da5ca31868c4817b6b7eb7e1cf47"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-mvc-plugin-flashmessenger/zipball/1af2e2d69500da5ca31868c4817b6b7eb7e1cf47",
+                "reference": "1af2e2d69500da5ca31868c4817b6b7eb7e1cf47",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6 || ^7.0",
+                "zendframework/zend-mvc": "^3.0",
+                "zendframework/zend-session": "^2.8.5",
+                "zendframework/zend-stdlib": "^2.7 || ^3.0",
+                "zendframework/zend-view": "^2.10"
+            },
+            "conflict": {
+                "zendframework/zend-mvc": "<3.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7.27 || ^6.5.8 || ^7.1.4",
+                "zendframework/zend-coding-standard": "~1.0.0",
+                "zendframework/zend-i18n": "^2.8"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev",
+                    "dev-develop": "1.2.x-dev"
+                },
+                "zf": {
+                    "component": "Zend\\Mvc\\Plugin\\FlashMessenger"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Mvc\\Plugin\\FlashMessenger\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Plugin for creating and exposing flash messages via zend-mvc controllers",
+            "keywords": [
+                "ZendFramework",
+                "mvc",
+                "zf"
+            ],
+            "time": "2018-04-30 18:47:56"
         },
         {
             "name": "zendframework/zend-paginator",
@@ -2670,7 +2727,7 @@
                 "paginator",
                 "zf2"
             ],
-            "time": "2018-01-30T15:52:44+00:00"
+            "time": "2018-01-30 15:52:44"
         },
         {
             "name": "zendframework/zend-router",
@@ -2732,7 +2789,7 @@
                 "zend",
                 "zf"
             ],
-            "time": "2019-02-26T20:24:12+00:00"
+            "time": "2019-02-26 20:24:12"
         },
         {
             "name": "zendframework/zend-servicemanager",
@@ -2800,7 +2857,74 @@
                 "servicemanager",
                 "zf"
             ],
-            "time": "2018-12-22T06:05:09+00:00"
+            "time": "2018-12-22 06:05:09"
+        },
+        {
+            "name": "zendframework/zend-session",
+            "version": "2.8.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-session.git",
+                "reference": "2cfd90e1a2f6b066b9f908599251d8f64f07021b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-session/zipball/2cfd90e1a2f6b066b9f908599251d8f64f07021b",
+                "reference": "2cfd90e1a2f6b066b9f908599251d8f64f07021b",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6 || ^7.0",
+                "zendframework/zend-eventmanager": "^2.6.2 || ^3.0",
+                "zendframework/zend-stdlib": "^2.7 || ^3.0"
+            },
+            "require-dev": {
+                "container-interop/container-interop": "^1.1",
+                "mongodb/mongodb": "^1.0.1",
+                "php-mock/php-mock-phpunit": "^1.1.2 || ^2.0",
+                "phpunit/phpunit": "^5.7.5 || >=6.0.13 <6.5.0",
+                "zendframework/zend-cache": "^2.6.1",
+                "zendframework/zend-coding-standard": "~1.0.0",
+                "zendframework/zend-db": "^2.7",
+                "zendframework/zend-http": "^2.5.4",
+                "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3",
+                "zendframework/zend-validator": "^2.6"
+            },
+            "suggest": {
+                "mongodb/mongodb": "If you want to use the MongoDB session save handler",
+                "zendframework/zend-cache": "Zend\\Cache component",
+                "zendframework/zend-db": "Zend\\Db component",
+                "zendframework/zend-http": "Zend\\Http component",
+                "zendframework/zend-servicemanager": "Zend\\ServiceManager component",
+                "zendframework/zend-validator": "Zend\\Validator component"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.8-dev",
+                    "dev-develop": "2.9-dev"
+                },
+                "zf": {
+                    "component": "Zend\\Session",
+                    "config-provider": "Zend\\Session\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Session\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "manage and preserve session data, a logical complement of cookie data, across multiple page requests by the same client",
+            "keywords": [
+                "ZendFramework",
+                "session",
+                "zf"
+            ],
+            "time": "2018-02-22 16:33:54"
         },
         {
             "name": "zendframework/zend-stdlib",
@@ -2846,7 +2970,7 @@
                 "stdlib",
                 "zf"
             ],
-            "time": "2018-08-28T21:34:05+00:00"
+            "time": "2018-08-28 21:34:05"
         },
         {
             "name": "zendframework/zend-uri",
@@ -2893,7 +3017,7 @@
                 "uri",
                 "zf"
             ],
-            "time": "2019-02-27T21:39:04+00:00"
+            "time": "2019-02-27 21:39:04"
         },
         {
             "name": "zendframework/zend-validator",
@@ -2966,7 +3090,7 @@
                 "validator",
                 "zf2"
             ],
-            "time": "2019-01-30T14:26:10+00:00"
+            "time": "2019-01-30 14:26:10"
         },
         {
             "name": "zendframework/zend-view",
@@ -3053,7 +3177,7 @@
                 "view",
                 "zf2"
             ],
-            "time": "2019-02-19T17:40:15+00:00"
+            "time": "2019-02-19 17:40:15"
         },
         {
             "name": "zfcampus/zf-development-mode",
@@ -3102,7 +3226,7 @@
                 "framework",
                 "zf"
             ],
-            "time": "2018-05-07T15:44:42+00:00"
+            "time": "2018-05-07 15:44:42"
         }
     ],
     "packages-dev": [],

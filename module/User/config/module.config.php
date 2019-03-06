@@ -97,5 +97,22 @@ return [
             AuthenticationService::class => Service\Factory\AuthenticationServiceFactory::class
 
         ]
+    ],
+    
+    'access_filter'=>[
+        'controllers'=>[
+            Controller\UserController::class=>[
+                //liệt kê các action cho phép khi chưa đăng nhập
+                [
+                    'actions' => ['resetPassword','setPassword'],
+                    'allow' => "all"
+                ],
+                //liệt kê các action yêu cầu phải đăng nhập
+                [
+                    'actions' => ['index','add','edit','delete','changePassword'],
+                    'allow' => "limit"
+                ]
+            ]
+        ]
     ]
 ]; 

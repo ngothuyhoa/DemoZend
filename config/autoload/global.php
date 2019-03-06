@@ -10,13 +10,17 @@
  * control, so do not include passwords or other sensitive information in this
  * file.
  */
+use Zend\Session\Storage\SessionArrayStorage;
+use Zend\Session\Validator\RemoteAddr;
+use Zend\Session\Validator\HttpUserAgent;
+
 
 return [
     'db' => [
       	'driver' => 'Pdo',
       	'dsn' => 'mysql:dbname=tutorials;host=localhost;',
       	'driver_options' => [PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''],
-      	'username' => 'admin',
+      	'username' => 'root',
    		 'password' => 'ngothuyhoa'
       	
    ],
@@ -29,7 +33,7 @@ return [
                 'params' => [
                     'host'     => 'localhost',
                     'port'     => '3306',
-                    'user'     => 'admin',
+                    'user'     => 'root',
                     'password' => 'ngothuyhoa',
                     'dbname'   => 'tutorials',
                     'charset' => 'utf8'
@@ -44,4 +48,18 @@ return [
                 => 'Zend\Db\Adapter\AdapterServiceFactory',
          ],
      ],
+
+     'session_config' => [
+        'cookie_lifetime' => 3600,//1h
+        'gc_maxlifetime'  => 2*3600
+    ],
+    'session_manager'=>[
+        'validators'=>[
+            RemoteAddr::class,
+            HttpUserAgent::class
+        ]
+    ],
+    'session_storage'=>[
+        'type' => SessionArrayStorage::class
+    ]
 ];

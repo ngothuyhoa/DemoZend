@@ -3,7 +3,7 @@ namespace Login\Entity;
 use Doctrine\ORM\Mapping as Mapping;
 /**
  * @Mapping\Entity
- * @Mapping\Table(name="users")
+ * @Mapping\Table(name="user")
  */
 class Users{
     //`id`, `user_name`, `password`, `email`
@@ -23,6 +23,16 @@ class Users{
 
     /** @Mapping\Column(type="string", name="email", unique=TRUE) */
     private $email;
+
+    /**
+     * @Mapping\Column(name="pwd_reset_token")  
+     */
+    protected $passwordResetToken;
+    
+    /**
+     * @Mapping\Column(name="pwd_reset_token_creation_date")  
+     */
+    protected $passwordResetTokenCreationDate;
 
 
     //`id`, `user_name`, `password`, `email`
@@ -80,6 +90,42 @@ class Users{
      */
     public function setUsername($username){
         $this->username = $username;
+    }
+
+    /**
+     * Returns password reset token.
+     * @return string
+     */
+    public function getResetPasswordToken()
+    {
+        return $this->passwordResetToken;
+    }
+    
+    /**
+     * Sets password reset token.
+     * @param string $token
+     */
+    public function setPasswordResetToken($token) 
+    {
+        $this->passwordResetToken = $token;
+    }
+    
+    /**
+     * Returns password reset token's creation date.
+     * @return string
+     */
+    public function getPasswordResetTokenCreationDate()
+    {
+        return $this->passwordResetTokenCreationDate;
+    }
+    
+    /**
+     * Sets password reset token's creation date.
+     * @param string $date
+     */
+    public function setPasswordResetTokenCreationDate($date) 
+    {
+        $this->passwordResetTokenCreationDate = $date;
     }
 }
 

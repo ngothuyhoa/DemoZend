@@ -44,4 +44,16 @@ class UserManager{
 
         //111111!!
     }
+
+    public function validatePassword($user, $password) 
+    {
+        $bcrypt = new Bcrypt();
+        $passwordHash = $user->getPassword();
+        
+        if ($bcrypt->verify($password, $passwordHash)) {
+            return true;
+        }
+        
+        return false;
+    }
 }

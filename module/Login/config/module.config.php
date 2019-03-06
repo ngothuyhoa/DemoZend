@@ -15,7 +15,7 @@ use Zend\Authentication\AuthenticationService;
 return [
     'router' => [
         'routes' => [
-            'user' => [
+            'admin' => [
                 'type'    => Segment::class,
                 'options' => [
                     'route'    => '/admin[/:action[/:id]]',
@@ -39,12 +39,35 @@ return [
                         'action'     => 'register',
                     ],
                 ],
+            ],
+
+            'login' => [
+                'type'    => Segment::class,
+                'options' => [
+                    'route'    => '/login',
+                    'defaults' => [
+                        'controller' => Controller\AuthController::class,
+                        'action'     => 'login',
+                    ],
+                ],
+            ],
+            'logout' => [
+                'type'    => Segment::class,
+                'options' => [
+                    'route'    => '/logout',
+                    'defaults' => [
+                        'controller' => Controller\AuthController::class,
+                        'action'     => 'logout',
+                    ],
+                ],
             ],      
         ],
     ],
     'controllers' => [
         'factories' => [
-            Controller\UserController::class => Controller\Factory\UserControllerFactory::class
+            Controller\UserController::class => Controller\Factory\UserControllerFactory::class,
+            Controller\AuthController::class => Controller\Factory\AuthControllerFactory::class
+
         ],
     ],
     'view_manager' => [
@@ -78,6 +101,26 @@ return [
     'service_manager'=>[
         'factories' => [
             Service\UserManager::class =>  Service\Factory\UserManagerFactory::class,
+            Service\AuthManager::class =>  Service\Factory\AuthManagerFactory::class,
+            Service\AuthAdapter::class =>  Service\Factory\AuthAdapterFactory::class,
+            AuthenticationService::class=> Service\Factory\AuthenticationServiceFactory::class
         ]
     ],
+
+    'access_filter'=>[
+        'controllers'=>[
+            Controller\UserController::class=>[
+                //liệt kê các action cho phép khi chưa đăng nhập
+                [
+                    'actions' => ['resetPassword','setPassword'],
+                    'allow' => "all"
+                ],
+                //liệt kê các action yêu cầu phải đăng nhập
+                [
+                    'actions' => ['index','add','edit','delete','changePassword'],
+                    'allow' => "limit"
+                ]
+            ]
+        ]
+    ]
 ];
