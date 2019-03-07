@@ -33,15 +33,15 @@ class Module
     }
 
     public function onDispath(MvcEvent $event){
+
         $controllerName = $event->getRouteMatch()->getParam('controller',null);
         $actionName = $event->getRouteMatch()->getParam('action',null);
 
         $authManager = $event->getApplication()->getServiceManager()->get(AuthManager::class);
-        if(!$authManager->filterAccess($controllerName,$actionName) || $controllerName != AuthController::class && !$authManager->authenticationService->hasIdentity()){
+        if(!$authManager->filterAccess($controllerName,$actionName)){
             //không có quyền
             $controller = $event->getTarget();
             return $controller->redirect()->toRoute('login');
         }
-       
     }
 }

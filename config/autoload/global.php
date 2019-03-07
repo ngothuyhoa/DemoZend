@@ -54,11 +54,13 @@ return [
         'gc_maxlifetime'  => 2*3600
     ],
     'session_manager'=>[
+        // Session validators (used for security).
         'validators'=>[
             RemoteAddr::class,
             HttpUserAgent::class
         ]
     ],
+    // Session storage configuration.
     'session_storage'=>[
         'type' => SessionArrayStorage::class
     ]

@@ -42,11 +42,15 @@ class UserController extends AbstractActionController{
                 $user = $this->userManager->addUser($data);
                 
                 return $this->redirect()->toRoute('user');
-
             }
         }
         $view = new ViewModel(['form'=>$form]);
         $view->setTemplate('users/register');
         return $view;
+    }
+
+    public function resetPasswordAction() {
+        echo 'hhi';
+        return false;
     }
 }

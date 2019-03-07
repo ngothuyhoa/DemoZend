@@ -41,6 +41,17 @@ return [
                 ],
             ],
 
+            'resetpassword' => [
+                'type'    => Segment::class,
+                'options' => [
+                    'route'    => '/reset-password',
+                    'defaults' => [
+                        'controller' => Controller\UserController::class,
+                        'action'     => 'resetPassword',
+                    ],
+                ],
+            ],
+
             'login' => [
                 'type'    => Segment::class,
                 'options' => [
@@ -60,13 +71,24 @@ return [
                         'action'     => 'logout',
                     ],
                 ],
+            ],
+            'test' => [
+                'type'    => Segment::class,
+                'options' => [
+                    'route'    => '/test',
+                    'defaults' => [
+                        'controller' => Controller\TestController::class,
+                        'action'     => 'test',
+                    ],
+                ],
             ],      
         ],
     ],
     'controllers' => [
         'factories' => [
             Controller\UserController::class => Controller\Factory\UserControllerFactory::class,
-            Controller\AuthController::class => Controller\Factory\AuthControllerFactory::class
+            Controller\AuthController::class => Controller\Factory\AuthControllerFactory::class,
+            Controller\TestController::class => InvokableFactory::class
 
         ],
     ],
@@ -112,15 +134,28 @@ return [
             Controller\UserController::class=>[
                 //liệt kê các action cho phép khi chưa đăng nhập
                 [
-                    'actions' => ['resetPassword','setPassword'],
+                    'actions' => ['setPassword', 'register'],
                     'allow' => "all"
                 ],
                 //liệt kê các action yêu cầu phải đăng nhập
                 [
-                    'actions' => ['index','add','edit','delete','changePassword'],
+                    'actions' => ['index'],
+                    'allow' => "limit"
+                ]
+            ],
+
+            Controller\TestController::class=>[
+                //liệt kê các action cho phép khi chưa đăng nhập
+                [
+                    'actions' => ['testt'],
+                    'allow' => "all"
+                ],
+                //liệt kê các action yêu cầu phải đăng nhập
+                [
+                    'actions' => ['test'],
                     'allow' => "limit"
                 ]
             ]
-        ]
+        ],
     ]
 ];

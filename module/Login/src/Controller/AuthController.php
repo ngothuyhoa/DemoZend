@@ -37,7 +37,6 @@ class AuthController extends AbstractActionController{
                    return $this->redirect()->toRoute('login');
                 }
             }
-
         }
         $view = new ViewModel(['form'=>$form]);
         $view->setTemplate('auth/login');
@@ -48,7 +47,6 @@ class AuthController extends AbstractActionController{
         $this->authManager->logout();
         return $this->redirect()->toRoute('login');
     }
-
 }
 
 ?>
