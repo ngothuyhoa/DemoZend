@@ -27,5 +27,6 @@ return [
     'Application',
     'Employee',
     'User',
-    'Login'
+    'Login',
+    'Blog'
 ];

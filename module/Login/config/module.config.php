@@ -88,8 +88,7 @@ return [
         'factories' => [
             Controller\UserController::class => Controller\Factory\UserControllerFactory::class,
             Controller\AuthController::class => Controller\Factory\AuthControllerFactory::class,
-            Controller\TestController::class => InvokableFactory::class
-
+            Controller\TestController::class => Factory\ListControllerFactory::class
         ],
     ],
     'view_manager' => [

@@ -75,6 +75,16 @@ return [
                     ], 
                 ], 
             ],
+            'List' => [ 
+                'type' => Literal::class,
+                'options' => [ 
+                    'route' => '/list',
+                    'defaults' => [ 
+                        'controller' => Controller\ListController::class,
+                        'action' => 'index', 
+                    ], 
+                ], 
+            ],
         ], 
     ],
 
