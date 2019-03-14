@@ -1,9 +1,19 @@
 <h1>Blog</h1>
 
-<?php foreach ($this->posts as $post): ?>
-<article>
-  <h1 id="post<?= $post->getId() ?>"><?= $post->getTitle() ?></h1>
-
-  <p><?= $post->getText() ?></p>
-</article>
+<table class="table"> 
+   <tr> 
+      <th>Title</th> 
+      <th>Text</th> 
+      <th>Edit/Delete operations</th>
+   </tr> 
+   <?php foreach ($this->posts as $post): ?>
+   <tr>
+   		<td><?= $post->getTitle() ?></td>
+   		<td><?= $post->getText() ?></td>
+   </tr>
 <?php endforeach ?>
+</table> 
+
+
+
+

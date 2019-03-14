@@ -19,6 +19,7 @@ class ListController extends AbstractActionController
 
     public function indexAction()
     {
+       // var_dump($this->postRepository->findAllPosts());
         return new ViewModel([
             'posts' => $this->postRepository->findAllPosts(),
         ]);
@@ -26,9 +27,10 @@ class ListController extends AbstractActionController
     }
     public function detailAction()
     {
+       
         $id = $this->params()->fromRoute('id');
         $a = $this->postRepository->findPost($id);
-        var_dump($a);
+        var_dump($id);
         return false;
         
     }

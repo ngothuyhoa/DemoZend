@@ -2,6 +2,7 @@
 namespace Blog\Controller;
 
 use Blog\Form\PostForm;
+use Blog\Form\PostRepositoryInterface;
 use Blog\Model\Post;
 use Blog\Model\PostCommandInterface;
 use Zend\Mvc\Controller\AbstractActionController;
@@ -20,35 +21,40 @@ class WriteController extends AbstractActionController
     private $form;
 
     /**
+     * @var PostRepositoryInterface
+     */
+
+    private $repository;
+
+    /**
      * @param PostCommandInterface $command
      * @param PostForm $form
      */
-    public function __construct(PostCommandInterface $command, PostForm $form)
+    public function __construct($command, $form, $repository)
     {
         $this->command = $command;
         $this->form = $form;
+        $this->repository = $repository;
     }
 
     public function addAction()
     {
-       // var_dump($this->form);
-        $request   = $this->getRequest();
+       $request   = $this->getRequest();
         $viewModel = new ViewModel(['form' => $this->form]);
 
         if (! $request->isPost()) {
             return $viewModel;
         }
 
-        $this->form->setData($this->params()->fromPost());
+        $this->form->setData($request->getPost());
 
         if (! $this->form->isValid()) {
             return $viewModel;
         }
 
-        $data = $this->form->getData();
-        $post = new Post($data['title'], $data['text']);
-        //$post = $this->form->getData();
-        //var_dump($post);
+        /*$data = $this->form->getData()['post'];
+        $post = new Post($data['title'], $data['text']);*/
+        $post = $this->form->getData();
 
         try {
             $post = $this->command->insertPost($post);
@@ -59,7 +65,43 @@ class WriteController extends AbstractActionController
         }
 
         return $this->redirect()->toRoute(
-            'blog'
+            'blog/detail',
+            ['id' => $post->getId()]
         );
+    }
+
+    public function editAction()
+    {
+
+        $id = $this->params()->fromRoute('id');
+        if (! $id) {
+            return $this->redirect()->toRoute('blog');
+        } 
+
+        try {
+            $post = $this->repository->findPost($id);
+        } catch (InvalidArgumentException $ex) {
+            return $this->redirect()->toRoute('blog');
+        }
+        
+        //Truyen du lieu qua form
+        $this->form->bind($post);
+
+        $viewModel = new ViewModel(['form' => $this->form]);
+
+        $request = $this->getRequest();
+
+        if (! $request->isPost()) {
+            return $viewModel;
+        }
+
+        $this->form->setData($request->getPost());
+
+        if ($this->form->isValid()) {
+            $post = $this->command->updatePost($post);
+            return $this->redirect()->toRoute(
+                'blog'
+            );
+        }
     }
 }

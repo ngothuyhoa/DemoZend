@@ -7,16 +7,16 @@ use Zend\InputFilter;
 
 class PostForm extends Form
 {
-    public function __construct(){
-        parent::__construct();
+    // public function __construct(){
+    //     parent::__construct();
         
-        $this->init(); //định nghĩa form
-        $this->InputFilter(); //định nghĩa cho filter+validate
-    }
+    //     $this->init(); //định nghĩa form
+    //     $this->InputFilter(); //định nghĩa cho filter+validate
+    // }
 
     public function init()
     {
-       /* $this->add([
+        $this->add([
         'name' => 'post',
         'type' => PostFieldset::class,
         'options' => [
@@ -32,10 +32,10 @@ class PostForm extends Form
                 'value' => 'Insert new Post',
                 'class' => 'btn btn-danger'
             ],
-        ]);*/
+        ]);
 
         //title
-        $title = new Element\Text('title');
+        /*$title = new Element\Text('title');
         $title->setLabel('Title ')
             ->setLabelAttributes([
                 'for' => 'title',
@@ -67,7 +67,7 @@ class PostForm extends Form
             'value'=>'Add',
             'class'=>'btn btn-success'
         ]);
-        $this->add($submit);
+        $this->add($submit);*/
     }
 
     private function InputFilter(){
