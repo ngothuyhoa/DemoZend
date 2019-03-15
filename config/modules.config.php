@@ -12,7 +12,6 @@
  */
 return [
     'Zend\Mvc\Plugin\FlashMessenger',
-    'Zend\Cache',
     'Zend\Paginator',
     'Zend\Form',
     'Zend\Hydrator',
@@ -28,5 +27,6 @@ return [
     'Employee',
     'User',
     'Login',
-    'Blog'
+    'Blog',
+    'Home'
 ];
