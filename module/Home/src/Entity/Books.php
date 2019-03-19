@@ -36,11 +36,18 @@ class Books{
      /** @Mapping\Column(type="string") */
     private $add_information;
 
-     
+    /**
+     * @Mapping\ManyToMany(targetEntity="\Home\Entity\Images", inversedBy="books")
+     * @Mapping\JoinTable(name="book_image",
+     *      joinColumns={@Mapping\JoinColumn(name="book_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@Mapping\JoinColumn(name="image_id", referencedColumnName="id")}
+     *      )
+     */
+
     protected $images;
 
     /**
-     * @Mapping\OneToMany(targetEntity="\Home\Entity\Categories", mappedBy="books")
+     * @Mapping\ManyToOne(targetEntity="\Home\Entity\Categories", inversedBy="books")
      * @Mapping\JoinColumn(name="category_id", referencedColumnName="id")
      */
 
@@ -179,6 +186,11 @@ class Books{
     {
         $this->images->removeElement($image);
     }
+
+    /*
+     * Returns associated post.
+     * @return \Home\Entity\Categories
+     */
 
     public function getCategories() 
     {

@@ -5,6 +5,7 @@ use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 use Home\Entity\Books;
 use Home\Entity\Images;
+use Doctrine\ORM\Query\Expr\Join;
 
 class HomeController extends AbstractActionController
 {
@@ -19,37 +20,23 @@ class HomeController extends AbstractActionController
     public function indexAction(){
     	
         $books = $this->entityManager->getRepository(Books::class)->findAll();
+        $cateories = $this->entityManager->getRepository(Books::class)->findBy(['category_id' => '1']);
 
-        
-        /*$book = $this->entityManager->createQueryBuilder();
-        $book
-            ->select('b', 'i')
-            ->from('Home\Entity\Books', 'b')
-            ->leftJoin(
-                    'Home\Entity\Images', 'i', \Doctrine\ORM\Query\Expr\Join::WITH, 'b.cityId = c.cityId'
-            )
-            ->where('uc = :cityId')
-            ->setParameter('cityId', $cityId);
-    		return $qb->getQuery()->getResult();*/
-    	foreach ($books as $book) {
-    		/*foreach ($book->getCategories() as $cate) {
-    			echo "<pre>";
-		        var_dump($cate);
-		        echo "</pre>";
-    		}*/
-
-    		echo "<pre>";
-		        var_dump(((array)$book->getCategories())[1]);
-		        echo "</pre>";
-    			
-
-    	}
-        
-    	return false;
-        
+    		/*echo "<pre>";
+		    var_dump($books);
+		    echo "</pre>";
+        return false;*/
        
-        /*$view = new ViewModel(['books' => $books]);
+        $view = new ViewModel(['books' => $books, 'cateories' => $cateories]);
         
-        return $view;*/
+        return $view;
+    }
+
+    public function detailAction(){
+
+        $id = $this->params()->fromRoute('id');
+        $book = $this->entityManager->getRepository(Books::class)->find($id);
+        
+        return new ViewModel(['book' => $book]);
     }
 }

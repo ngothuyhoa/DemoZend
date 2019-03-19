@@ -52,7 +52,7 @@ class Images{
     }
 
    /**
-    * @Mapping\ManyToMany(targetEntity="\Home\Entity\Books", mappedBy="images")
+    * @Mapping\ManyToMany(targetEntity="\Home\Entity\Books", mappedBy="Images")
     */
     
     protected $books;
@@ -66,7 +66,7 @@ class Images{
     // Returns posts associated with this tag.
     public function getBooks() 
     {
-        return $this->Books;
+        return $this->books;
     }
     
     // Adds a post into collection of posts related to this tag.

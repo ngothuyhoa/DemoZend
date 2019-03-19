@@ -28,12 +28,18 @@
 			<li class="control" data-filter="all">Recommended</li>
 			<li class="control" data-filter=".best">Best sellers</li>
 		</ul>
+		<h3> Tat Ca Truyen</h3>
+		<hr>
 		<div class="row" id="product-filter">
 			<?php foreach($books as $book): ?>
 				<div class="mix col-lg-3 col-md-6 best">
 					<div class="product-item">
+						<a href="<?= $this->url('home_detail', ['action'=>'detail', 'id' =>$book->getId()]);?>">
 						<figure>
-							<img src="" alt="">
+							<?php foreach($book->getImages() as $image): ?>
+								<img id="img-custom" src="<?=$this->escapeHtml($image->getUrl())?>" alt="">
+								<?php break ?>
+							<?php endforeach; ?>
 							<div class="pi-meta">
 								<div class="pi-m-left">
 									<img src="img/icons/eye.png" alt="">
@@ -45,9 +51,42 @@
 								</div>
 							</div>
 						</figure>
+						</a>
 						<div class="product-info">
 							<h6><?=$this->escapeHtml($book->getName())?></h6>
 							<p><?=$this->escapeHtml($book->getPrice())?>.đ</p>
+							<a href="#" class="site-btn btn-line">ADD TO CART</a>
+						</div>
+					</div>
+				</div>
+			<?php endforeach; ?>
+		</div>
+		<h3> Truyen Tranh</h3>
+		<hr>
+		<div class="row" id="product-filter">
+			<?php foreach($cateories as $category): ?>
+				<div class="mix col-lg-3 col-md-6 best">
+					<div class="product-item">
+						<a href="">
+						<figure>
+							<?php foreach($category->getImages() as $image): ?>
+								<img id="img-custom" src="<?=$this->escapeHtml($image->getUrl())?>" alt="">
+							<?php endforeach; ?>
+							<div class="pi-meta">
+								<div class="pi-m-left">
+									<img src="img/icons/eye.png" alt="">
+									<p>quick view</p>
+								</div>
+								<div class="pi-m-right">
+									<img src="img/icons/heart.png" alt="">
+									<p>save</p>
+								</div>
+							</div>
+						</figure>
+						</a>
+						<div class="product-info">
+							<h6><?=$this->escapeHtml($category->getName())?></h6>
+							<p><?=$this->escapeHtml($category->getPrice())?>.đ</p>
 							<a href="#" class="site-btn btn-line">ADD TO CART</a>
 						</div>
 					</div>

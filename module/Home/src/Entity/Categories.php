@@ -69,7 +69,7 @@ class Categories{
     }
 
     /**
-   	 * @Mapping\ManyToOne(targetEntity="\Home\Entity\Books", inversedBy="categories")
+   	 * @Mapping\OneToMany(targetEntity="\Home\Entity\Books", mappedBy="categories")
      * @Mapping\JoinColumn(name="id", referencedColumnName="category_id")
      */
     

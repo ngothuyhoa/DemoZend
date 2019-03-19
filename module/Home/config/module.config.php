@@ -19,13 +19,17 @@ return [
                     ],
                 ],
             ],
-            'applications' => [
+            'home_detail' => [
                 'type'    => Segment::class,
                 'options' => [
-                    'route'    => '/applications[/:action]',
+                    'route'    => '/home[/:action[/:id]]',
+                    'constraints' => [
+                        'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                        'id' => '[0-9]+', 
+                    ], 
                     'defaults' => [
                         'controller' => Controller\HomeController::class,
-                        'action'     => 'index',
+                        'action'     => 'detail',
                     ],
                 ],
             ],
